@@ -1,8 +1,10 @@
-mysql-connector
+mysql-connector-python
 pandas
 streamlit
 plotly
-calendar
 babel
-datetime
-streamlit_option_menu
+streamlit-option-menu
+facebook-sdk
+pickle-mixin
+pathlib
+streamlit-authenticator
