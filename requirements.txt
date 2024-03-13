@@ -1,0 +1,8 @@
+mysql-connector
+pandas
+streamlit
+plotly
+calendar
+babel
+datetime
+streamlit_option_menu
