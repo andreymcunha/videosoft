@@ -13,25 +13,7 @@ from pathlib import Path
 import streamlit_authenticator as stauth
 
 
-#--- USER AUTHENTICATION ---
-names = ['VideoSoft','Ariel', 'Usuário teste']
-usernames = ['videosoftadmin','arieladmin','usuario']
 
-#load hashed passwords
-file_path= Path(__file__).parent/'hashed_pw.pkl'
-with file_path.open("rb") as file:
-    hashed_passwords = pickle.load(file)
-
-authenticator = stauth.Authenticate(names, usernames, hashed_passwords, "videosoft_dashboard", "cookiessignature")
-
-name, authentication_status, username = authenticator.login('Login','main')
-
-if authentication_status == False:
-    st.error("Username/password errado")
-if authentication_status == None:
-    st.warning("Por favor, coloque seu usuário e senha")
-
-if authentication_status:
 
     st.set_page_config(layout='wide')
 
@@ -40,8 +22,8 @@ if authentication_status:
     # Cor desejada (pode ser um código hexadecimal, nome da cor, etc.)
     cor_da_sidebar = "#d3d3d3"  
 
-    authenticator.logout("Logout","sidebar")
-    st.sidebar.title(f"Bem-vindo {name}")
+   
+   
     st.markdown("""
     <style>
         [data-testid=stSidebar] {
