@@ -54,7 +54,7 @@ info_conta = graph.get_object('me', fields='id,name,adaccounts')
 
 
 # Sidebar para selecionar as datas
-start_date = st.sidebar.date_input('Data de início', None)
+start_date = st.sidebar.date_input('Data de início')
 end_date = st.sidebar.date_input('Data de término')
 
 # Calcular o tamanho do intervalo selecionado pelo usuário
