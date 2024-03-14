@@ -452,7 +452,7 @@ if selected == 'Vendas':
 
         #COLUNA 3
         col1C, col2C, col3C = st.columns(3)
-        col2C.metric("Investimento", f'R${total_spend:.2f}',delta=f'{delta_total_spend.iloc[0]:.2f}%')
+        col2C.metric("Investimento", f'R${total_spend.iloc[0]:.2f}',delta=f'{delta_total_spend.iloc[0]:.2f}%')
         
 
         #st.sidebar.write("Selecione o período para o gráfico'))
