@@ -222,8 +222,10 @@ if selected == 'Vendas':
         # Exibir o DataFrame com todas as colunas
         #st.write(df_mod_deals)
 
-        # Consulta SQL para carregar os dados da tabela mod_field_values
-        query_mod_field_values = f"""
+        # Verifique se df_mod_deals['id'] não está vazio
+        if not df_mod_deals['id'].empty:
+            # Construa a consulta SQL apenas se houver valores em df_mod_deals['id']
+            query_mod_field_values = f"""
                 SELECT *
                 FROM mod_field_values
                 WHERE object_id IN ({', '.join(map(str, df_mod_deals['id'].tolist()))});
