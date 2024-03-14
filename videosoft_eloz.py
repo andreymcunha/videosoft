@@ -52,7 +52,7 @@ graph = facebook.GraphAPI(access_token)
 
 info_conta = graph.get_object('me', fields='id,name,adaccounts')
 
-
+start_date = datetime(2024,1,1)
 # Sidebar para selecionar as datas
 start_date = st.sidebar.date_input('Data de início')
 end_date = st.sidebar.date_input('Data de término')
